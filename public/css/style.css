@@ -1,0 +1,32 @@
+.garis {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid black;
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+.animasi-ketikan {
+    animation: ketikan 4s steps(20) 1s 1 normal both,
+        kedip 500ms steps(20) infinite normal;
+}
+
+@keyframes ketikan {
+    from {
+        width: 0;
+    } to {
+        width: 9em;
+    }
+}
+
+@keyframes kedip {
+    from {
+        border-right-color: black;
+    } to {
+        border-right-color: transparent;
+    }
+}
