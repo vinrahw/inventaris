@@ -62,6 +62,8 @@
                         <th>Keterangan</th>
                         <th>Tanggal</th>
                         <th>Aksi</th>
+                        <th>Aksi</th>
+
                     </tr>
                 </thead>
                 <tbody>
