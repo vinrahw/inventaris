@@ -10,7 +10,7 @@ class InventarisModel extends Model
     protected $primaryKey = 'id';
 
     protected $useTimestamps = true;
-    protected $allowedFields = ['nama', 'jumlah', 'keterangan'];
+    protected $allowedFields = ['nama', 'jumlah', 'kondisi', 'keterangan'];
 
     public function getInventaris($id = false)
     {

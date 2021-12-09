@@ -63,6 +63,13 @@ class Inventaris extends BaseController
                 ]
             ],
 
+            'kondisi' => [
+                'rules' => 'required[inventaris.kondisi]',
+                'errors' => [
+                    'required' => '{field} inventaris harus diisi'
+                ]
+            ],
+
             'keterangan' => [
                 'rules' => 'required[inventaris.keterangan]',
                 'errors' => [
@@ -77,6 +84,7 @@ class Inventaris extends BaseController
         $this->inventarisModel->save([
             'nama' => $this->request->getVar('nama'),
             'jumlah' => $this->request->getVar('jumlah'),
+            'kondisi' => $this->request->getVar('kondisi'),
             'keterangan' => $this->request->getVar('keterangan')
         ]);
 
@@ -110,6 +118,7 @@ class Inventaris extends BaseController
             'id' => $id,
             'nama' => $this->request->getVar('nama'),
             'jumlah' => $this->request->getVar('jumlah'),
+            'kondisi' => $this->request->getVar('kondisi'),
             'keterangan' => $this->request->getVar('keterangan')
         ]);
 

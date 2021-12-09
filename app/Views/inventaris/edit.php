@@ -47,6 +47,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mb-3">
+                    <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control <?= ($validation->hasError('keterangan')) ?
+                                                                    'is-invalid' : ''; ?>" id="keterangan" name="keterangan" value="<?= old('keterangan'); ?>">
+
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            <?= $validation->getError('keterangan'); ?>
+                        </div>
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Ubah Data</button>
             </form>
         </div>
