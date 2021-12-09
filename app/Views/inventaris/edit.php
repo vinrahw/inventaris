@@ -20,7 +20,7 @@
                             <?= $validation->getError('nama'); ?>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="row mb-3">
                     <label for="jumlah" class="col-sm-2 col-form-label">Jumlah</label>
                     <div class="col-sm-10">
@@ -33,13 +33,17 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="keterangan" class="col-sm-2 col-form-label">Keterangan</label>
+                    <label for="keterangan" class="col-sm-2 col-form-label">Kondisi</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control <?= ($validation->hasError('keterangan')) ?
-                                                                    'is-invalid' : ''; ?>" id="keterangan" name="keterangan" value="<?= $inventaris->keterangan ?>">
-
+                        <select id="kondisi" name="cctv" class="" <?= ($validation->hasError('kondisi')) ?
+                                                                        'is-invalid' : ''; ?>" id="kondisi" name="kondisi" value="<?= old('kondisi'); ?>">>
+                            <option value="Ada">Baik</option>
+                            <option value="Ada">Buruk</option>
+                            <option value="Ada">Hilang</option>
+                            <option value="Tidak Ada">Rusak</option>
+                        </select>
                         <div id="validationServer03Feedback" class="invalid-feedback">
-                            <?= $validation->getError('keterangan'); ?>
+                            <?= $validation->getError('kondisi'); ?>
                         </div>
                     </div>
                 </div>

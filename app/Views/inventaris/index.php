@@ -59,10 +59,10 @@
                         <th>#</th>
                         <th>Nama</th>
                         <th>Jumlah</th>
-                        <th>Keterangan</th>
+                        <th>Kondisi</th>
                         <th>Tanggal</th>
                         <th>Aksi</th>
-                        <th>Aksi</th>
+
 
                     </tr>
                 </thead>
@@ -73,7 +73,7 @@
                             <th scope="row"><?= $n++; ?></th>
                             <td><?= $i['nama']; ?></td>
                             <td><?= $i['jumlah']; ?></td>
-                            <td><?= $i['keterangan']; ?></td>
+                            <td><?= $i['kondisi']; ?></td>
                             <td><?= $i['created_at']; ?></td>
                             <td>
                                 <a href="/inventaris/edit/<?= $i['id']; ?>" class="btn btn-warning btn-icon-split">
