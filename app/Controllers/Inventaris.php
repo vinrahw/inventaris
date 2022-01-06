@@ -81,6 +81,7 @@ class Inventaris extends BaseController
             return redirect()->to('/inventaris/create')->withInput()->with('validation', $validation);
         }
 
+
         $this->inventarisModel->save([
             'nama' => $this->request->getVar('nama'),
             'jumlah' => $this->request->getVar('jumlah'),
@@ -121,6 +122,7 @@ class Inventaris extends BaseController
             'kondisi' => $this->request->getVar('kondisi'),
             'keterangan' => $this->request->getVar('keterangan')
         ]);
+
 
         session()->setFlashdata('pesan', 'Data Berhasil diubah');
 

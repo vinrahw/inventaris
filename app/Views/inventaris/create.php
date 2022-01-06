@@ -32,8 +32,8 @@
                 <div class="row mb-3">
                     <label for="kondisi" class="col-sm-2 col-form-label">Kondisi</label>
                     <div class="col-sm-10">
-                        <select id="kondisi" name="cctv" class="" <?= ($validation->hasError('kondisi')) ?
-                                                                        'is-invalid' : ''; ?>" id="kondisi" name="kondisi" value="<?= old('kondisi'); ?>">>
+                        <select id="kondisi" name="kondisi" class="" <?= ($validation->hasError('kondisi')) ?
+                                                                            'is-invalid' : ''; ?>" id="kondisi" name="kondisi" value="<?= old('kondisi'); ?>">>
                             <option value="Ada">Baik</option>
                             <option value="Ada">Buruk</option>
                             <option value="Ada">Hilang</option>

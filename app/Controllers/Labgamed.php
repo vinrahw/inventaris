@@ -7,7 +7,7 @@ use App\Models\LabgamedModel;
 class Labgamed extends BaseController
 {
 	protected $labgamedModel;
-	public function index()
+	public function __construct()
 	{
 		$this->labgamedModel = new LabgamedModel();
 	}
@@ -59,6 +59,13 @@ class Labgamed extends BaseController
 
 			'jumlah' => [
 				'rules' => 'required[labgamed.jumlah]',
+				'errors' => [
+					'required' => '{field} labgamed harus diisi'
+				]
+			],
+
+			'kondisi' => [
+				'rules' => 'required[labgamed.kondisi]',
 				'errors' => [
 					'required' => '{field} labgamed harus diisi'
 				]
