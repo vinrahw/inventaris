@@ -63,12 +63,6 @@ class Inventaris extends BaseController
                 ]
             ],
 
-            'kondisi' => [
-                'rules' => 'required[inventaris.kondisi]',
-                'errors' => [
-                    'required' => '{field} inventaris harus diisi'
-                ]
-            ],
 
             'keterangan' => [
                 'rules' => 'required[inventaris.keterangan]',

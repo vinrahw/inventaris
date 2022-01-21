@@ -32,16 +32,13 @@
                 <div class="row mb-3">
                     <label for="kondisi" class="col-sm-2 col-form-label">Kondisi</label>
                     <div class="col-sm-10">
-                        <select id="kondisi" name="kondisi" class="" <?= ($validation->hasError('kondisi')) ?
-                                                                            'is-invalid' : ''; ?>" id="kondisi" name="kondisi" value="<?= old('kondisi'); ?>">>
+                        <select id="kondisi" name="kondisi" class="">
                             <option value="Ada">Baik</option>
                             <option value="Ada">Buruk</option>
                             <option value="Ada">Hilang</option>
                             <option value="Tidak Ada">Rusak</option>
                         </select>
-                        <div id="validationServer03Feedback" class="invalid-feedback">
-                            <?= $validation->getError('kondisi'); ?>
-                        </div>
+
                     </div>
                 </div>
                 <div class="row mb-3">
