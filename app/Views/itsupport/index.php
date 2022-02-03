@@ -10,7 +10,7 @@
         </div>
         <p class="text-center">Sistem ini kami gunakan untuk mendata setiap barang yang ada di Divisi IT-SUPPORT pada Laboratorium Informatika, Universitas
             Muhammadiyah Sidoarjo
-        </p> 
+        </p>
     </div>
 </div>
 
@@ -35,6 +35,7 @@
                         <th>#</th>
                         <th>Nama</th>
                         <th>Jumlah</th>
+                        <th>Kondisi</th>
                         <th>Keterangan</th>
                         <th>Tanggal</th>
                         <th>Aksi</th>
@@ -47,6 +48,7 @@
                             <th scope="row"><?= $n++; ?></th>
                             <td><?= $itsupport['nama']; ?></td>
                             <td><?= $itsupport['jumlah']; ?></td>
+                            <td><?= $itsupport['kondisi']; ?></td>
                             <td><?= $itsupport['keterangan']; ?></td>
                             <td><?= $itsupport['created_at']; ?></td>
                             <td>
