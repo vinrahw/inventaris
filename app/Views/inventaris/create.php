@@ -34,8 +34,8 @@
                     <div class="col-sm-10">
                         <select id="kondisi" name="kondisi" class="">
                             <option value="Ada">Baik</option>
-                            <option value="Ada">Buruk</option>
-                            <option value="Ada">Hilang</option>
+                            <option value="Buruk">Buruk</option>
+                            <option value="Hilang">Hilang</option>
                             <option value="Tidak Ada">Rusak</option>
                         </select>
 
