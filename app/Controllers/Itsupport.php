@@ -13,12 +13,12 @@ class Itsupport extends BaseController
     }
     public function index()
     {
-        
+
 
         $data = [
             'title' => 'Data IT-SUPPORT',
             'itsupport' => $this->itsupportModel->getItsupport()
-        
+
 
         ];
 
@@ -76,6 +76,7 @@ class Itsupport extends BaseController
         $this->itsupportModel->save([
             'nama' => $this->request->getVar('nama'),
             'jumlah' => $this->request->getVar('jumlah'),
+            'kondisi' => $this->request->getVar('kondisi'),
             'keterangan' => $this->request->getVar('keterangan')
         ]);
 
@@ -109,6 +110,7 @@ class Itsupport extends BaseController
             'id' => $id,
             'nama' => $this->request->getVar('nama'),
             'jumlah' => $this->request->getVar('jumlah'),
+            'kondisi' => $this->request->getVar('kondisi'),
             'keterangan' => $this->request->getVar('keterangan')
         ]);
 

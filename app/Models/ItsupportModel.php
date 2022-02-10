@@ -6,11 +6,11 @@ use CodeIgniter\Model;
 
 class ItsupportModel extends Model
 {
-    protected $table = 'itsupport';
+    protected $table = 'itsupport'; 
     protected $primaryKey = 'id';
 
     protected $useTimestamps = true;
-    protected $allowedFields = ['nama', 'jumlah', 'keterangan'];
+    protected $allowedFields = ['nama', 'jumlah', 'kondisi', 'keterangan'];
 
     public function getItsupport($id = false)
     {

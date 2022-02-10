@@ -33,10 +33,10 @@
                     <label for="kondisi" class="col-sm-2 col-form-label">Kondisi</label>
                     <div class="col-sm-10">
                         <select id="kondisi" name="kondisi" class="">
-                            <option value="Ada">Baik</option>
+                            <option value="Baik">Baik</option>
                             <option value="Buruk">Buruk</option>
                             <option value="Hilang">Hilang</option>
-                            <option value="Tidak Ada">Rusak</option>
+                            <option value="Rusak">Rusak</option>
                         </select>
 
                     </div>

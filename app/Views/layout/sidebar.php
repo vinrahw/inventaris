@@ -66,10 +66,10 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Lab Lt 2 :</h6>
                     <a class="collapse-item" href="<?= base_url('/labgamed'); ?>">Lab Gamed</a>
-                    <a class="collapse-item" href="<?= base_url('/labsiskomda'); ?>">Lab RBC dan Riset</a>
+                    <a class="collapse-item" href="<?= base_url('/labruangbaca'); ?>">Lab RBC</a>
                     <a class="collapse-item" href="<?= base_url('/labsiskomda'); ?>">Lab Siskom</a>
                     <h6 class="collapse-header">Lab Lt 3 :</h6>
-                    <a class="collapse-item" href="">Lab RPL</a>
+                    <a class="collapse-item" href="<?= base_url('/labrpl'); ?>">Lab RPL</a>
                     <a class="collapse-item" href="">Lab Algoprog</a>
                     <a class="collapse-item" href="">Lab Komputasi</a>
                     <a class="collapse-item" href="">Lab SC</a>

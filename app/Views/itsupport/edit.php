@@ -41,10 +41,10 @@ use App\Controllers\Itsupport;
                     <div class="col-sm-10">
                         <select id="kondisi" name="kondisi" class="" <?= ($validation->hasError('kondisi')) ?
                                                                             'is-invalid' : ''; ?>" id="kondisi" name="kondisi" value="<?= old('kondisi'); ?>">>
-                            <option value="Ada">Baik</option>
-                            <option value="Ada">Buruk</option>
-                            <option value="Ada">Hilang</option>
-                            <option value="Tidak Ada">Rusak</option>
+                            <option value="Baik">Baik</option>
+                            <option value="Buruk">Buruk</option>
+                            <option value="Hilang">Hilang</option>
+                            <option value="Rusak">Rusak</option>
                         </select>
                         <div id="validationServer03Feedback" class="invalid-feedback">
                             <?= $validation->getError('kondisi'); ?>

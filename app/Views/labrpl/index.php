@@ -4,7 +4,7 @@
 
 <div class="card mb-4">
   <div class="card-body">
-    <h6 class="m-0 font-weight-bold text-primary">LAB - GAME DAN MULTIMEDIA</h6>
+    <h6 class="m-0 font-weight-bold text-primary">LAB - RPL</h6>
     <div class="text-center">
       <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="/img/pict-ictbidus.svg" alt="...">
     </div>
@@ -17,7 +17,7 @@
 <!-- DataLab -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <a href="/labgamed/create" class=" font-weight-bold btn btn-primary">Tambah Data</a>
+    <a href="/labrpl/create" class=" font-weight-bold btn btn-primary">Tambah Data</a>
     <br>
     <?php if (session()->getFlashdata('pesan')) : ?>
       <div class="card mt-2 mb-2 py-3 border-left-success">
@@ -28,7 +28,7 @@
     <?php endif ?>
 
   </div>
-  <div class="card-body"> 
+  <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
@@ -45,17 +45,17 @@
         </thead>
         <tbody>
           <?php $n = 1; ?>
-          <?php foreach ($labgamed as $gamed) : ?>
+          <?php foreach ($labrpl as $rpl) : ?>
             <tr>
               <th scope="row"><?= $n++; ?></th>
-              <td><?= $gamed['nama']; ?></td>
-              <td><?= $gamed['jumlah']; ?></td>
-              <td><?= $gamed['spesifikasi_lab']; ?></td>
-              <td><?= $gamed['cctv']; ?></td>
-              <td><?= $gamed['keterangan']; ?></td>
-              <td><?= $gamed['created_at']; ?></td>
+              <td><?= $rpl['nama']; ?></td>
+              <td><?= $rpl['jumlah']; ?></td>
+              <td><?= $rpl['spesifikasi_lab']; ?></td>
+              <td><?= $rpl['cctv']; ?></td>
+              <td><?= $rpl['keterangan']; ?></td>
+              <td><?= $rpl['created_at']; ?></td>
               <td>
-                <a href="/labgamed/edit/<?= $gamed['id']; ?>" class="btn btn-warning btn-icon-split">
+                <a href="/labrpl/edit/<?= $rpl['id']; ?>" class="btn btn-warning btn-icon-split">
                   <span class="icon text-white-50">
                     <i class="fas fa-exclamation-triangle"></i>
                   </span>
@@ -63,7 +63,7 @@
                 </a>
 
 
-                <form action="/labgamed/<?= $gamed['id']; ?>" method="post" class="d-inline">
+                <form action="/labrpl/<?= $rpl['id']; ?>" method="post" class="d-inline">
                   <?= csrf_field(); ?>
                   <input type="hidden" name="_method" value="DELETE">
                   <button type="submit" class="btn btn-danger btn-icon-split" onclick="return confirm('Apakah anda yakin?')">
