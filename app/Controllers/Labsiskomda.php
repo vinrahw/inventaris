@@ -24,7 +24,7 @@ class Labsiskomda extends BaseController
 	public function create()
 	{
 		$data = [
-			'title' => 'Data Lab Sistem Komputer',
+			'title' => 'Data Lab Siskom | Tambah Data',
 			'validation' => \Config\Services::validation()
 		];
 		return view('labsiskomda/create', $data);
@@ -39,6 +39,13 @@ class Labsiskomda extends BaseController
 				'errors' => [
 					'required' => '{field}  harus diisi',
 					'is_unique' => '{field}  sudah terdaftar'
+				]
+			],
+
+			'spesifikasi_lab' => [
+				'rules' => 'required[labsiskomda.spesifikasi_lab]',
+				'errors' => [
+					'required' => '{field}  harus diisi'
 				]
 			],
 
@@ -63,6 +70,8 @@ class Labsiskomda extends BaseController
 		$this->labsiskomdaModel->save([
 			'nama' => $this->request->getVar('nama'),
 			'jumlah' => $this->request->getVar('jumlah'),
+			'spesifikasi_lab' => $this->request->getVar('spesifikasi_lab'),
+			'cctv' => $this->request->getVar('cctv'),
 			'keterangan' => $this->request->getVar('keterangan')
 		]);
 
@@ -96,6 +105,8 @@ class Labsiskomda extends BaseController
 			'id' => $id,
 			'nama' => $this->request->getVar('nama'),
 			'jumlah' => $this->request->getVar('jumlah'),
+			'spesifikasi_lab' => $this->request->getVar('spesifikasi_lab'),
+			'cctv' => $this->request->getVar('cctv'),
 			'keterangan' => $this->request->getVar('keterangan')
 		]);
 

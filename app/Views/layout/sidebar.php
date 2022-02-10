@@ -65,7 +65,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Lab Lt 2 :</h6>
-                    <a class="collapse-item" href="">Lab Gamed</a>
+                    <a class="collapse-item" href="<?= base_url('/labgamed'); ?>">Lab Gamed</a>
                     <a class="collapse-item" href="<?= base_url('/labsiskomda'); ?>">Lab RBC dan Riset</a>
                     <a class="collapse-item" href="<?= base_url('/labsiskomda'); ?>">Lab Siskom</a>
                     <h6 class="collapse-header">Lab Lt 3 :</h6>

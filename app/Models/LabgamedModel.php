@@ -10,9 +10,9 @@ class LabgamedModel extends Model
     protected $primaryKey = 'id';
 
     protected $useTimestamps = true;
-    protected $allowedFields = ['nama', 'jumlah', 'keterangan'];
+    protected $allowedFields = ['nama', 'jumlah', 'spesifikasi_lab', 'cctv', 'keterangan'];
 
-    public function getItsupport($id = false)
+    public function getLabgamed($id = false)
     {
         if ($id === false) {
             return $this->findAll();

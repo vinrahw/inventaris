@@ -18,16 +18,9 @@ class Labgamed extends BaseController
 
 		$data = [
 			'title' => 'Data Lab Game dan Multimedia',
-			'labgamed' => $this->labgamedModel->getlabgamed()
+			'labgamed' => $this->labgamedModel->getLabgamed()
 
 		];
-
-		// $labgamedModel = new \App\Models\labgamedModel();
-		// $labgamedModel = new labgamedModel();
-
-		// if (empty($data['labgamed'])) {
-		//     throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Tidak Ditemukan');
-		// }
 
 		return view('labgamed/index', $data);
 	}
@@ -35,9 +28,9 @@ class Labgamed extends BaseController
 
 	public function create()
 	{
-		// session();
+
 		$data = [
-			'title' => 'Data Bidus | Tambah Data',
+			'title' => 'Data Gamed | Tambah Data',
 			'validation' => \Config\Services::validation()
 
 		];
@@ -64,12 +57,6 @@ class Labgamed extends BaseController
 				]
 			],
 
-			'kondisi' => [
-				'rules' => 'required[labgamed.kondisi]',
-				'errors' => [
-					'required' => '{field} labgamed harus diisi'
-				]
-			],
 
 			'keterangan' => [
 				'rules' => 'required[labgamed.keterangan]',
@@ -85,6 +72,8 @@ class Labgamed extends BaseController
 		$this->labgamedModel->save([
 			'nama' => $this->request->getVar('nama'),
 			'jumlah' => $this->request->getVar('jumlah'),
+			'spesifikasi_lab' => $this->request->getVar('spesifikasi_lab'),
+			'cctv' => $this->request->getVar('cctv'),
 			'keterangan' => $this->request->getVar('keterangan')
 		]);
 
@@ -103,7 +92,7 @@ class Labgamed extends BaseController
 	public function edit($id)
 	{
 		$data = [
-			'title' => 'Data Bidus | Ubah Data',
+			'title' => 'Data Gamed | Ubah Data',
 			'validation' => \Config\Services::validation(),
 			'labgamed' => $this->labgamedModel->getlabgamed($id)->getRow()
 
@@ -118,6 +107,8 @@ class Labgamed extends BaseController
 			'id' => $id,
 			'nama' => $this->request->getVar('nama'),
 			'jumlah' => $this->request->getVar('jumlah'),
+			'spesifikasi_lab' => $this->request->getVar('spesifikasi_lab'),
+			'cctv' => $this->request->getVar('cctv'),
 			'keterangan' => $this->request->getVar('keterangan')
 		]);
 
