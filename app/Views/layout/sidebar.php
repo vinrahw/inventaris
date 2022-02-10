@@ -71,7 +71,7 @@
                     <h6 class="collapse-header">Lab Lt 3 :</h6>
                     <a class="collapse-item" href="<?= base_url('/labrpl'); ?>">Lab RPL</a>
                     <a class="collapse-item" href="<?= base_url('/labalgoprog'); ?>">Lab Algoprog</a>
-                    <a class="collapse-item" href="">Lab Komputasi</a>
+                    <a class="collapse-item" href="<?= base_url('/labkomputasi'); ?>">Lab Komputasi</a>
                     <a class="collapse-item" href="">Lab SC</a>
                 </div>
             </div>
