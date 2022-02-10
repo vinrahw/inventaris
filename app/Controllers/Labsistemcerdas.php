@@ -1,15 +1,15 @@
 <?php
- 
+
 namespace App\Controllers;
 
-use App\Models\LaboratoriumModel;
+use App\Models\LabsistemcerdasModel;
 
-class Laboratorium extends BaseController
+class Labsistemcerdas extends BaseController
 {
-  protected $laboratoriumModel;
+  protected $labsistemcerdasModel;
   public function __construct()
   {
-    $this->laboratoriumModel = new LaboratoriumModel();
+    $this->labsistemcerdasModel = new LabsistemcerdasModel();
   }
 
   public function index()
@@ -18,11 +18,11 @@ class Laboratorium extends BaseController
 
     $data = [
       'title' => 'Data Lab Game dan Multimedia',
-      'laboratorium' => $this->laboratoriumModel->getLaboratorium()
+      'labsistemcerdas' => $this->labsistemcerdasModel->getLabsistemcerdas()
 
     ];
 
-    return view('laboratorium/index', $data);
+    return view('labsistemcerdas/index', $data);
   }
 
 
@@ -30,11 +30,11 @@ class Laboratorium extends BaseController
   {
 
     $data = [
-      'title' => 'Data komputasi | Tambah Data',
+      'title' => 'Data sistemcerdas | Tambah Data',
       'validation' => \Config\Services::validation()
 
     ];
-    return view('laboratorium/create', $data);
+    return view('labsistemcerdas/create', $data);
   }
 
   public function save()
@@ -43,33 +43,33 @@ class Laboratorium extends BaseController
     //validasi input
     if (!$this->validate([
       'nama' => [
-        'rules' => 'required|is_unique[laboratorium.nama]',
+        'rules' => 'required|is_unique[labsistemcerdas.nama]',
         'errors' => [
-          'required' => '{field} laboratorium harus diisi',
-          'is_unique' => '{field} laboratorium sudah terdaftar'
+          'required' => '{field} labsistemcerdas harus diisi',
+          'is_unique' => '{field} labsistemcerdas sudah terdaftar'
         ]
       ],
 
       'jumlah' => [
-        'rules' => 'required[laboratorium.jumlah]',
+        'rules' => 'required[labsistemcerdas.jumlah]',
         'errors' => [
-          'required' => '{field} laboratorium harus diisi'
+          'required' => '{field} labsistemcerdas harus diisi'
         ]
       ],
 
 
       'keterangan' => [
-        'rules' => 'required[laboratorium.keterangan]',
+        'rules' => 'required[labsistemcerdas.keterangan]',
         'errors' => [
-          'required' => '{field} laboratorium harus diisi'
+          'required' => '{field} labsistemcerdas harus diisi'
         ]
       ]
     ])) {
       $validation = \Config\Services::validation();
-      return redirect()->to('/laboratorium/create')->withInput()->with('validation', $validation);
+      return redirect()->to('/labsistemcerdas/create')->withInput()->with('validation', $validation);
     }
 
-    $this->laboratoriumModel->save([
+    $this->labsistemcerdasModel->save([
       'nama' => $this->request->getVar('nama'),
       'jumlah' => $this->request->getVar('jumlah'),
       'spesifikasi_lab' => $this->request->getVar('spesifikasi_lab'),
@@ -79,31 +79,31 @@ class Laboratorium extends BaseController
 
     session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan');
 
-    return redirect()->to('/laboratorium');
+    return redirect()->to('/labsistemcerdas');
   }
 
   public function delete($id)
   {
-    $this->laboratoriumModel->delete($id);
+    $this->labsistemcerdasModel->delete($id);
     session()->setFlashdata('pesan', 'Data Berhasil dihapus');
-    return redirect()->to('/laboratorium');
+    return redirect()->to('/labsistemcerdas');
   }
 
   public function edit($id)
   {
     $data = [
-      'title' => 'Data komputasi | Ubah Data',
+      'title' => 'Data sistemcerdas | Ubah Data',
       'validation' => \Config\Services::validation(),
-      'laboratorium' => $this->laboratoriumModel->getlaboratorium($id)->getRow()
+      'labsistemcerdas' => $this->labsistemcerdasModel->getlabsistemcerdas($id)->getRow()
 
     ];
-    return view('laboratorium/edit', $data);
+    return view('labsistemcerdas/edit', $data);
   }
 
   public function update($id)
   {
     $id = $this->request->getVar('id');
-    $this->laboratoriumModel->save([
+    $this->labsistemcerdasModel->save([
       'id' => $id,
       'nama' => $this->request->getVar('nama'),
       'jumlah' => $this->request->getVar('jumlah'),
@@ -114,6 +114,6 @@ class Laboratorium extends BaseController
 
     session()->setFlashdata('pesan', 'Data Berhasil diubah');
 
-    return redirect()->to('/laboratorium');
+    return redirect()->to('/labsistemcerdas');
   }
 }

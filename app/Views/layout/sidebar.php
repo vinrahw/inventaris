@@ -55,6 +55,13 @@
                 <span>IT - Support</span>
             </a>
         </li>
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('/laboratorium'); ?>">
+                <i class="fas fa-fw fa-book"></i>
+                <span>Data Lab</span>
+            </a>
+        </li>
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
@@ -72,7 +79,7 @@
                     <a class="collapse-item" href="<?= base_url('/labrpl'); ?>">Lab RPL</a>
                     <a class="collapse-item" href="<?= base_url('/labalgoprog'); ?>">Lab Algoprog</a>
                     <a class="collapse-item" href="<?= base_url('/labkomputasi'); ?>">Lab Komputasi</a>
-                    <a class="collapse-item" href="">Lab SC</a>
+                    <a class="collapse-item" href="<?= base_url('/labsistemcerdas'); ?>">Lab SC</a>
                 </div>
             </div>
         </li>
