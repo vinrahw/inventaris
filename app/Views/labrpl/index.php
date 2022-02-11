@@ -63,7 +63,7 @@
                 </a>
 
 
-                <form action="/labrpl/<?= $rpl['id']; ?>" method="post" class="d-inline">
+                <form action="/labrpl/delete/<?= $rpl['id']; ?>" method="post" class="d-inline">
                   <?= csrf_field(); ?>
                   <input type="hidden" name="_method" value="DELETE">
                   <button type="submit" class="btn btn-danger btn-icon-split" onclick="return confirm('Apakah anda yakin?')">

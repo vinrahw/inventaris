@@ -28,7 +28,7 @@
     <?php endif ?>
 
   </div>
-  <div class="card-body"> 
+  <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
@@ -63,7 +63,7 @@
                 </a>
 
 
-                <form action="/labgamed/<?= $gamed['id']; ?>" method="post" class="d-inline">
+                <form action="/labgamed/delete/<?= $gamed['id']; ?>" method="post" class="d-inline">
                   <?= csrf_field(); ?>
                   <input type="hidden" name="_method" value="DELETE">
                   <button type="submit" class="btn btn-danger btn-icon-split" onclick="return confirm('Apakah anda yakin?')">

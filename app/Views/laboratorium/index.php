@@ -61,7 +61,7 @@
                   </span>
                   <span class="text">Edit</span>
                 </a>
-
+ 
 
                 <form action="/laboratorium/delete/<?= $lab['id']; ?>" method="post" class="d-inline">
                   <?= csrf_field(); ?>
